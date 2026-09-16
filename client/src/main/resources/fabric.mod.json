@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "chieri_perler_client",
+  "version": "${version}",
+  "name": "Chieri 拼豆工作室",
+  "description": "A polished Mard 291-colour editor with exact-RGB artwork and animated equipment charms.",
+  "authors": ["SCCYd"],
+  "contact": {
+    "homepage": "https://chieri-player-guide.chieri.chatgpt.site/creations",
+    "sources": "https://github.com/SCCYduanlu/chieri-perler",
+    "issues": "https://github.com/SCCYduanlu/chieri-perler/issues"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.chiericat.perler.client.PerlerClient"]
+  },
+  "mixins": ["chieri-perler-client.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": ">=0.155.0+26.2"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "chieri_perler",
+  "version": "${version}",
+  "name": "Chieri 拼豆工坊",
+  "description": "Authoritative fuse-bead tables with the supplied Mard 291-colour palette, persistent projects, direct displays and mod-rendered exact-colour art.",
+  "authors": ["SCCYd"],
+  "contact": {
+    "homepage": "https://chieri-player-guide.chieri.chatgpt.site/creations",
+    "sources": "https://github.com/SCCYduanlu/chieri-perler",
+    "issues": "https://github.com/SCCYduanlu/chieri-perler/issues"
+  },
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": ["com.chiericat.perler.PerlerMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": ">=0.158.0+26.2",
+    "sgui": ">=2.1.0",
+    "flan": "*"
+  }
+}

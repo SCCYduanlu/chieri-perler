@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.chiericat.perler.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "ItemModelResolverMixin",
+    "PerlerItemFrameMixin",
+    "PerlerMapInHandMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

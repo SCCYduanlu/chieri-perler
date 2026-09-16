@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GHG",
+    "RCR",
+    "GGG"
+  ],
+  "key": {
+    "C": "minecraft:crafter",
+    "G": "minecraft:glass_pane",
+    "H": "minecraft:honeycomb",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "minecraft:crafter",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "拼豆台",
+        "color": "light_purple",
+        "bold": true,
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "放在地面后右键打开拼豆工坊",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "工程和耗材拆除后仍会保存",
+          "color": "aqua",
+          "italic": false
+        }
+      ],
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:custom_data": {
+        "chieri_perler_kind": "table"
+      }
+    }
+  }
+}

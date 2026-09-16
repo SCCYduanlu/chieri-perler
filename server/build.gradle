@@ -1,0 +1,57 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+    archivesName = 'chieri-perler'
+}
+
+repositories {
+    maven { url = 'https://maven.nucleoid.xyz/' }
+    maven { url = 'https://maven.blazing-coop.net/releases' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    compileOnly "eu.pb4:sgui:${project.sgui_version}"
+    compileOnly("io.github.flemmli97:flan:${project.minecraft_version}-${project.flan_version}-fabric") {
+        transitive = false
+    }
+    testImplementation platform('org.junit:junit-bom:5.13.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+loom {
+    mods {
+        'chieri_perler' { sourceSet sourceSets.main }
+    }
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand 'version': project.version }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+jar {
+    from(rootProject.file('LICENSE')) {
+        rename { 'LICENSE_chieri-perler' }
+    }
+}
